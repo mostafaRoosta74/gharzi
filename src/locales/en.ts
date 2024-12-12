@@ -1,5 +1,12 @@
 const en = {
   // General
+  CATEGORY:"Category",
+  NAME: "Name",
+  TIME:"Time",
+  BAIL_AMOUNT:"Bail Amount",
+  COUNT:"count",
+  STATUS:"status",
+
   TEST: "test",
   BOTTOM_NAVIGATE_HOME:"List",
   BOTTOM_NAVIGATE_PROFILE:"Profile",

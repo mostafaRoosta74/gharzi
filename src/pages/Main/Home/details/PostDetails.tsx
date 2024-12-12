@@ -7,8 +7,11 @@ import serverAxios, {BASE_URL} from "../../../../axios/serverAxios";
 import {PostType} from "../../../../@types/other";
 import {useSearchParams} from "react-router-dom";
 import {ReturnObjectDialog} from "../../Profile/dialogs/ReturnObjectDialog";
+import useLocales from "../../../../hooks/useLocales";
+
 
 export const PostDetails = () => {
+    const {translate} = useLocales();
     const [data,setData] = useState<PostType | null>(null)
     const [confirmDialog,setConfirmDialog] = useState<{ show: boolean,postId:string,clientId:string }>({
         show:false,
@@ -50,32 +53,32 @@ export const PostDetails = () => {
                 <Divider/>
                 <Box display={"flex"} justifyContent={"space-evenly"} style={{height:"60px"}} alignItems={"center"}>
                     <Stack alignItems={"center"}>
-                        <Typography variant={"body2"}>Category</Typography>
+                        <Typography variant={"body2"}>{translate("CATEGORY")}</Typography>
                         <Typography variant={"subtitle1"}>{data?.category.name}</Typography>
                     </Stack>
                     <Divider orientation={"vertical"} />
                     <Stack alignItems={"center"}>
-                        <Typography variant={"body2"}>Name</Typography>
+                        <Typography variant={"body2"}>{translate("NAME")}</Typography>
                         <Typography variant={"subtitle1"}>{data?.client.fullName}</Typography>
                     </Stack>
                     <Divider orientation={"vertical"}/>
                     <Stack alignItems={"center"}>
-                        <Typography variant={"body2"}>Time</Typography>
+                        <Typography variant={"body2"}>{translate("TIME")}</Typography>
                         <Typography variant={"subtitle1"}>{data?.maxTime.time} {data?.maxTime.unit}</Typography>
                     </Stack>
                 </Box>
                 <Divider/>
                 <Stack spacing={1} divider={<Divider/>}>
                     <Box display={"flex"} justifyContent={"space-between"} >
-                        <Typography color={"text.secondary"} variant={"body1"}>bailAmount</Typography>
+                        <Typography color={"text.secondary"} variant={"body1"}>{translate("BAIL_AMOUNT")}</Typography>
                         <Typography>{data?.bailAmount}</Typography>
                     </Box>
                     <Box display={"flex"} justifyContent={"space-between"} >
-                        <Typography color={"text.secondary"} variant={"body1"}>count</Typography>
-                        <Typography>{data?.count}</Typography>
+                        <Typography color={"text.secondary"} variant={"body1"}>{translate("COUNT")}</Typography>
+                        <Typography>{data?.count || 1}</Typography>
                     </Box>
                     <Box display={"flex"} justifyContent={"space-between"} >
-                        <Typography color={"text.secondary"} variant={"body1"}>status</Typography>
+                        <Typography color={"text.secondary"} variant={"body1"}>{translate("STATUS")}</Typography>
                         <Typography>{data?.status}</Typography>
                     </Box>
                     <Stack direction={"row"} spacing={1}>

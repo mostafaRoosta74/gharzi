@@ -24,6 +24,9 @@ export const usePhoneFrom = () => {
                 },
                 renderDependency:[currentLang.value],
                 inputProps: {
+                    style:{
+                        direction:"ltr"
+                    },
                     label: translate("LOGIN_PHONE_NUMBER"),
                     helperText: translate("LOGIN_PHONE_NUMBER_HELPER")
                 },

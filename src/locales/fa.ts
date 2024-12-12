@@ -1,4 +1,11 @@
 const fa = {
+  CATEGORY:"دسته بندی",
+  NAME: "نام",
+  TIME:"زمان",
+  BAIL_AMOUNT:"مقدار وثیقه",
+  COUNT:"تعداد",
+  STATUS:"وضعیت",
+
   // General
   TEST: "تست",
   BOTTOM_NAVIGATE_HOME:"لیست",
