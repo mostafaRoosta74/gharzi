@@ -2,6 +2,7 @@ import {AppBar, Button, IconButton, Menu, MenuItem, Toolbar, Typography, useThem
 import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
 import LanguageIcon from '@mui/icons-material/Language';
 import {matchRoutes, useLocation, useNavigate} from "react-router-dom";
+import LogoutIcon from '@mui/icons-material/Logout';
 import {useMemo, useState, useTransition} from "react";
 import useLocales from "../../hooks/useLocales";
 import useSettings from "../../hooks/useSettings";
@@ -55,6 +56,12 @@ export const TopAppBar = () => {
             <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
                 {translate(getPageTitle(location.pathname))}
             </Typography>
+            <IconButton sx={{color:"white"}} onClick={(event)=>{
+                window.localStorage.setItem("token","");
+                window.location.reload();
+            }}>
+                <LogoutIcon color={"inherit"}/>
+            </IconButton>
             <IconButton sx={{color:"white"}} onClick={(event)=>{
                 setAnchorEl(event.currentTarget)
             }}>
