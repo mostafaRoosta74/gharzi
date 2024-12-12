@@ -1,4 +1,4 @@
-import {Box, Button, CardContent, Divider, Paper, Stack, Typography} from "@mui/material";
+import {Box, Button, CardContent, Divider, Paper, Stack, Typography,Backdrop,CircularProgress} from "@mui/material";
 import moment from "moment-jalaali";
 import {RequestForPostDialog} from "../components/dialogs/RequestForPostDialog";
 import {useEffect, useState} from "react";
@@ -26,16 +26,24 @@ export const PostDetails = () => {
     const [searchParams, setSearchParams] = useSearchParams();
     const requestId = searchParams.get('requestId')
     const status = searchParams.get('status')
+    const [loading,setLoading] =useState(true)
 
 
 
     useEffect(()=>{
         serverAxios.getSinglePost(id || "").then(res => {
             setData(res.result)
+            setLoading(false)
         })
     },[])
 
     return <Box pb={7}>
+        <Backdrop
+            sx={{ color: '#fff', zIndex: (theme) => theme.zIndex.drawer + 1 }}
+            open={loading}
+        >
+            <CircularProgress color="inherit" />
+        </Backdrop>
         <Paper sx={{height:"250px",overflow:"hidden",borderRadius:"4px"}}>
             <img src={`${BASE_URL}/${data?.file.url}`} alt={"aa"} style={{height:"100%",objectFit:"contain",width:"100%"}}/>
         </Paper>
