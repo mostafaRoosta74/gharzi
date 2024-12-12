@@ -106,9 +106,7 @@ const BottomNavigate = () => {
 
   return (
       <>
-        {
-          firstTime && <UserTour/>
-        }
+        <UserTour/>
 
         <Fab color="primary" sx={{
           position:"fixed",
