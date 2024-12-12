@@ -14,7 +14,7 @@ export type GeneralType<T> = {
     result:T,
     success:boolean
 }
-export const BASE_URL = "http://192.168.153.130:4680"
+export const BASE_URL = "https://gharzino.ghahveland.com"
 const instance = axios.create({
     baseURL: BASE_URL,
     headers:{
