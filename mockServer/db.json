@@ -1,0 +1,180 @@
+{
+  "posts": [
+    {
+      "desc": "توضیحات بیشتر ....",
+      "bailAmount": 2000000,
+      "title": "کتاب تحصیل گریزی بر اساس حمایت تحصیلی و امنیت روانی",
+      "date": "2023-12-28T12:01:09.364Z",
+      "maxTime": {
+        "time": 7,
+        "unit": "day"
+      },
+      "clientId": "2",
+      "forceToHaveBill": false,
+      "categoryId": "2",
+      "cityId": "2",
+      "imageUrl": "/img/2222.png",
+      "id": "rvcMHJW",
+      "status": "barrow"
+    },
+    {
+      "desc": "توضیحات بیشتر ....",
+      "bailAmount": 123123,
+      "title": "کتاب تحصیل گریزی بر اساس حمایت تحصیلی و امنیت روانی",
+      "date": "2023-12-28T15:47:37.868Z",
+      "maxTime": {
+        "time": 123,
+        "unit": "h"
+      },
+      "clientId": "1",
+      "forceToHaveBill": false,
+      "categoryId": "2",
+      "imageUrl": "/img/2222.png",
+      "status": "active",
+      "id": "HE8BCnD",
+      "cityId": "2"
+    },
+    {
+      "desc": "aaa",
+      "bailAmount": 123,
+      "title": "کتاب",
+      "date": "2023-12-29T04:28:03.717Z",
+      "maxTime": {
+        "time": 5,
+        "unit": "h"
+      },
+      "clientId": "2",
+      "forceToHaveBill": false,
+      "categoryId": "2",
+      "imageUrl": "/img/2222.png",
+      "status": "active",
+      "cityId": "1",
+      "id": "uGDcSlf"
+    },
+    {
+      "desc": "wwwww",
+      "bailAmount": 2000000,
+      "title": "qqqqq",
+      "date": "2024-12-11T13:51:40.188Z",
+      "maxTime": {
+        "time": 1,
+        "unit": "h"
+      },
+      "clientId": "_FcLgGd",
+      "forceToHaveBill": false,
+      "categoryId": "2",
+      "imageUrl": "/img/2222.png",
+      "status": "pending",
+      "cityId": "1",
+      "id": "Mo-8Kth"
+    }
+  ],
+  "clients": [
+    {
+      "id": "1",
+      "name": "مصطفی",
+      "lastName": "روستا",
+      "phone": "09396742329",
+      "isBanned": false,
+      "rate": 4.5,
+      "imageUrl": "/logo192.png",
+      "bannerUrl": "/logo192.png",
+      "walletAmount": 40000
+    },
+    {
+      "id": "2",
+      "name": "علی",
+      "lastName": "محلاتی",
+      "phone": "09399715537",
+      "isBanned": false,
+      "rate": 2.5,
+      "imageUrl": "/logo192.png",
+      "bannerUrl": "/logo192.png",
+      "walletAmount": 20000
+    },
+    {
+      "name": "aaaa",
+      "lastName": "aaa",
+      "bannerUrl": "",
+      "imageUrl": "",
+      "isBanned": false,
+      "rate": 0,
+      "walletAmount": 0,
+      "phone": "09170529907",
+      "id": "_FcLgGd"
+    },
+    {
+      "name": "aaa",
+      "lastName": "bbb",
+      "bannerUrl": "",
+      "imageUrl": "",
+      "isBanned": false,
+      "rate": 0,
+      "walletAmount": 0,
+      "phone": "09170529907",
+      "id": "sYJLxs5"
+    }
+  ],
+  "cities": [
+    {
+      "id": "1",
+      "name": "شیراز"
+    },
+    {
+      "id": "2",
+      "name": "تهران"
+    },
+    {
+      "id": "3",
+      "name": "مشهد"
+    },
+    {
+      "id": "4",
+      "name": "تبریز"
+    },
+    {
+      "id": "5",
+      "name": "اصفهان"
+    }
+  ],
+  "categories": [
+    {
+      "id": "1",
+      "name": "ابزار"
+    },
+    {
+      "id": "2",
+      "name": "کتاب"
+    },
+    {
+      "id": "3",
+      "name": "لوازم خانگی"
+    },
+    {
+      "id": "4",
+      "name": "خانه"
+    },
+    {
+      "id": "5",
+      "name": "لوازم پزشکی"
+    }
+  ],
+  "postRequests": [
+    {
+      "postId": "rvcMHJW",
+      "date": "2023-12-28T13:56:30.116Z",
+      "desc": "aaaaaa",
+      "clientId": "1",
+      "isVerified": false,
+      "id": "1"
+    }
+  ],
+  "postRequestVerify": [
+    {
+      "id": "1",
+      "postRequestId": "1",
+      "date": "2023-12-28T13:56:30.116Z",
+      "acceptedDesc": ""
+    }
+  ]
+}
