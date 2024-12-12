@@ -27,5 +27,5 @@ export const getAbsoluteRoute = (obj: NestedRouteObject, base = "") => {
 };
 
 export const fixToken= (token: string) => {
-  serverAxios.instance.defaults.headers["Authorization"] = token;
+  serverAxios.instance.defaults.headers["Authorization"] = `Bearer ${token}`;
 }

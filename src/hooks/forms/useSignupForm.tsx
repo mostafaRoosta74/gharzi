@@ -48,6 +48,9 @@ export const useSignupForm = () => {
                 mask:"0 0 0 0 0 0",
                 renderDependency:[currentLang.value],
                 inputProps: {
+                    style:{
+                        direction:"ltr"
+                    },
                     fullWidth:true,
                     label: translate("VERIFY_CODE"),
                     helperText: translate("VERIFY_CODE_HELPER")
