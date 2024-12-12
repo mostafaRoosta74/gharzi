@@ -6,6 +6,12 @@ const fa = {
   COUNT:"تعداد",
   STATUS:"وضعیت",
 
+  ACCEPT:"قبول",
+  REJECT:"رد",
+  ACCEPTED_AND_PENDING_FOR_REQUEST:"قبول شده و محصول آماده است",
+  REJECTED:"رد شده!",
+  REFUND:"بازگشت داده شده است",
+
   // General
   TEST: "تست",
   BOTTOM_NAVIGATE_HOME:"لیست",

@@ -3,11 +3,15 @@ import {useEffect, useState} from "react";
 import serverAxios from "../../../../axios/serverAxios";
 import {useParams} from "react-router";
 import {RequestType} from "../../../../@types/other";
+import useLocales from "../../../../hooks/useLocales";
+
 
 export const RequestList = () => {
     const [data,setData] = useState<RequestType["requests"]>([])
     const [title,setTitle] = useState<string>("")
     const {id} = useParams();
+    const {translate} = useLocales();
+
 
     const fetchData = () => {
         serverAxios.getPostRequest(id||"").then(res =>{
@@ -42,25 +46,25 @@ export const RequestList = () => {
                                             serverAxios.postChangeRequestStatus(item.id,"Accept").then(res => {
                                                 fetchData()
                                             })
-                                        }}>Accept</Button>
+                                        }}>{translate("ACCEPT")}</Button>
                                         <Button size="small" color={"error"} onClick={()=>{
                                             serverAxios.postChangeRequestStatus(item.id,"Reject").then(res => {
                                                 fetchData()
                                             })
-                                        }}>Reject</Button>
+                                        }}>{translate("REJECT")}</Button>
                                     </>
                                 }
                                 {
                                     item.status === "Accept" &&
-                                    <Chip label="Accepted & Pending for pickup" color="primary" />
+                                    <Chip label={translate("ACCEPTED_AND_PENDING_FOR_REQUEST")} color="primary" />
                                 }
                                 {
                                     item.status === "Reject" &&
-                                    <Chip label="Rejected!" color="error" />
+                                    <Chip label={translate("REJECTED")} color="error" />
                                 }
                                 {
                                     item.status === "Refund" &&
-                                    <Chip label="Refund and returned" color="success" />
+                                    <Chip label={translate("REFUND")} color="success" />
                                 }
 
                             </CardActions>

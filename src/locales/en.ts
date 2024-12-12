@@ -7,6 +7,12 @@ const en = {
   COUNT:"count",
   STATUS:"status",
 
+  ACCEPT:"Accept",
+  REJECT:"Reject",
+  ACCEPTED_AND_PENDING_FOR_REQUEST:"Accepted & Pending for pickup",
+  REJECTED:"Rejected!",
+  REFUND:"Refund and returned",
+
   TEST: "test",
   BOTTOM_NAVIGATE_HOME:"List",
   BOTTOM_NAVIGATE_PROFILE:"Profile",
